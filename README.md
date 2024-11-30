@@ -2,10 +2,10 @@
 
 ### Princy Sutariya  
 ## Objective  
-To use predictive modeling for optimizing costs and efficiency in the supply chain of HIV-related health commodities.
+To leverage predictive modeling to optimize costs and improve efficiency in the supply chain for HIV-related health commodities.
 
 ## Motivation  
-This project focuses on improving the reliability and cost-effectiveness of health commodity distribution in developing countries to ensure affordable and timely access to essential products for combating HIV.
+This project aims to enhance the reliability and cost-effectiveness of health commodity distribution in developing countries. By doing so, it ensures affordable and timely access to essential products needed to combat HIV, bridging gaps in healthcare delivery systems.
 
 ## Research Questions  
 1. How can supply chain costs be minimized for HIV-related health commodities?
@@ -23,7 +23,7 @@ The dataset comprises 10,324 rows and 33 columns covering various aspects of sup
 **Dataset Link:** [Supply Chain Shipment Pricing Data](https://catalog.data.gov/dataset/supply-chain-shipment-pricing-data-07d29)
 
 ## EDA & Methodology  
-1. **Data Preprocessing:** Handled missing values, standardized features, and engineered new metrics (e.g., cost per unit weight).
+1. **Data Preprocessing:** Handled missing values, Standardized and scaled numerical features, Engineered new features (e.g., total cost, cost per unit weight)
 2. **Modeling Approach:**
    - **Freight Cost Prediction:** Implemented using XGBoost (with potential plans to explore linear regression).
 3. **Optimization & Experimentation:** Optimized model parameters through Grid and Random Search. Implemented cost optimization via Linear and Mixed-Integer Linear Programming.
@@ -31,11 +31,11 @@ The dataset comprises 10,324 rows and 33 columns covering various aspects of sup
 ## Model Results & Evaluation  
 **Freight Cost Prediction:**
 
-- **Models Used:** XGBoost Regressor
+- **Models Used:** XGBoost & Linear Regression
 - **Evaluation Metrics:** Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R² Score.
 - **Results:**
-   - XGBoost: MAE = 488.94, RMSE = 1675.92, R² = 0.988
+   - XGBoost:RMSE = 943.644, R² = 0.996
+   - Linear Regression: RMSE= 300.78, R² = 0.9996
 
-## Next Steps  
-1. **Model Tuning:** Experiment with additional models (e.g., Gradient Boosting, Neural Networks) and advanced hyperparameter tuning (e.g., Bayesian Optimization).
-2. **Delay Prediction Expansion:** Expand models to predict shipment delays using additional features like historical delays, vendor performance, and seasonal factors.
+## Conclusion  
+Both models performed exceptionally well, but XGBoost's robustness in handling non-linear relationships makes it ideal for complex datasets, while Linear Regression provides a simpler, interpretable approach with slightly better accuracy in this dataset.
